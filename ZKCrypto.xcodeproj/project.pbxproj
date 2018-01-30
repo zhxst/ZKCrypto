@@ -44,7 +44,6 @@
 		1467210E201EBA3700963524 /* ZKCryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKCryptor.m; sourceTree = "<group>"; };
 		14672111201EC43D00963524 /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
 		14672112201EC43D00963524 /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
-		14672115201EC55600963524 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		14672134201EF07B00963524 /* ZKCryptoDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZKCryptoDemo.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -63,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				14672134201EF07B00963524 /* ZKCryptoDemo.xcodeproj */,
-				14672115201EC55600963524 /* MyPlayground.playground */,
 				146720F8201EB93A00963524 /* ZKCrypto */,
 				146720F7201EB93A00963524 /* Products */,
 			);
