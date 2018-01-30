@@ -2,6 +2,12 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+ZKCryptoDemo/
+ZKCryptoDemo.xcodeproj/
+MyPlayground.playground/
+
+
+
 ## Build generated
 build/
 DerivedData/
