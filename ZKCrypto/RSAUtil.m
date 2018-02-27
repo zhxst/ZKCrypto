@@ -8,6 +8,8 @@
 
 #import "RSAUtil.h"
 #import <Security/Security.h>
+static int TOTAL_DECRYPT_SIZE = 32;
+
 @interface RSAUtil ()
 
 @end
@@ -315,6 +317,13 @@ static NSData *base64_decode(NSString *str){
                                outbuf,
                                &outlen
                                );
+//        status = SecKeyDecrypt(keyRef,
+//                               kSecPaddingPKCS1,
+//                               srcbuf + idx,
+//                               data_len,
+//                               outbuf,
+//                               &outlen
+//                               );
         if (status != 0) {
             NSLog(@"SecKeyEncrypt fail. Error Code: %d", (int)status);
             ret = nil;
@@ -333,8 +342,12 @@ static NSData *base64_decode(NSString *str){
                     }
                 }
             }
-            
-            [ret appendBytes:&outbuf[idxFirstZero+1] length:idxNextZero-idxFirstZero-1];
+            if (idxNextZero - idxFirstZero != TOTAL_DECRYPT_SIZE && idxFirstZero + TOTAL_DECRYPT_SIZE + 1 < outlen) {
+                [ret appendBytes:&outbuf[idxNextZero+1] length:TOTAL_DECRYPT_SIZE];
+            }
+            else {
+                [ret appendBytes:&outbuf[idxFirstZero+1] length:idxNextZero-idxFirstZero-1];
+            }
         }
     }
     

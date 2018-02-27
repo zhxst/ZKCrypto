@@ -36,7 +36,7 @@ Common Crypto framework for personal use. It's temporary.
   #   'ZKCrypto' => ['ZKCrypto/Assets/*.png']
   # }
 
-   s.public_header_files = 'ZKCrypto/ZKCryptor.h'
-   s.frameworks = 'UIKit'
+   s.public_header_files = 'ZKCrypto/ZKCryptor.h', 'ZKCrypto/NSString+Hash.h'
+   s.frameworks = 'Foundation'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -481,9 +481,10 @@ static void FixKeyLengths( CCAlgorithm algorithm, NSMutableData * keyData, NSMut
 	NSMutableData * keyData, * ivData;
 	if ( [key isKindOfClass: [NSData class]] )
 		keyData = (NSMutableData *) [key mutableCopy];
-	else
-		keyData = [[key dataUsingEncoding: NSUTF8StringEncoding] mutableCopy];
-	
+    else {
+        NSString* keyString = [[key stringByReplacingOccurrencesOfString:@"\n" withString:@""] stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+        keyData = [[keyString dataUsingEncoding: NSUTF8StringEncoding] mutableCopy];
+    }
 	if ( [iv isKindOfClass: [NSString class]] )
 		ivData = [[iv dataUsingEncoding: NSUTF8StringEncoding] mutableCopy];
 	else

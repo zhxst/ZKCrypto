@@ -18,6 +18,8 @@
 		14672110201EBA3700963524 /* ZKCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1467210E201EBA3700963524 /* ZKCryptor.m */; };
 		14672113201EC43D00963524 /* RSAUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 14672111201EC43D00963524 /* RSAUtil.m */; };
 		14672114201EC43D00963524 /* RSAUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 14672112201EC43D00963524 /* RSAUtil.h */; };
+		149D21F12022E7DA00121552 /* NSString+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 149D21EF2022E7DA00121552 /* NSString+Hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		149D21F22022E7DA00121552 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 149D21F02022E7DA00121552 /* NSString+Hash.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		14672111201EC43D00963524 /* RSAUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAUtil.m; sourceTree = "<group>"; };
 		14672112201EC43D00963524 /* RSAUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAUtil.h; sourceTree = "<group>"; };
 		14672134201EF07B00963524 /* ZKCryptoDemo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ZKCryptoDemo.xcodeproj; sourceTree = SOURCE_ROOT; };
+		149D21EF2022E7DA00121552 /* NSString+Hash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		149D21F02022E7DA00121552 /* NSString+Hash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 				14672105201EB95F00963524 /* NSData+CommonCrypto.m */,
 				14672104201EB95F00963524 /* NSString+Base64.h */,
 				14672106201EB95F00963524 /* NSString+Base64.m */,
+				149D21EF2022E7DA00121552 /* NSString+Hash.h */,
+				149D21F02022E7DA00121552 /* NSString+Hash.m */,
 			);
 			path = ZKCrypto;
 			sourceTree = "<group>";
@@ -111,6 +117,7 @@
 			files = (
 				146720FB201EB93A00963524 /* ZKCrypto.h in Headers */,
 				1467210F201EBA3700963524 /* ZKCryptor.h in Headers */,
+				149D21F12022E7DA00121552 /* NSString+Hash.h in Headers */,
 				14672109201EB95F00963524 /* NSData+Base64.h in Headers */,
 				14672107201EB95F00963524 /* NSData+CommonCrypto.h in Headers */,
 				1467210A201EB95F00963524 /* NSString+Base64.h in Headers */,
@@ -150,6 +157,7 @@
 				TargetAttributes = {
 					146720F5201EB93A00963524 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -203,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14672113201EC43D00963524 /* RSAUtil.m in Sources */,
+				149D21F22022E7DA00121552 /* NSString+Hash.m in Sources */,
 				1467210C201EB95F00963524 /* NSString+Base64.m in Sources */,
 				1467210B201EB95F00963524 /* NSData+CommonCrypto.m in Sources */,
 				14672110201EBA3700963524 /* ZKCryptor.m in Sources */,
@@ -326,6 +335,7 @@
 		146720FF201EB93A00963524 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -341,6 +351,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -348,6 +360,7 @@
 		14672100201EB93A00963524 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
 				DEFINES_MODULE = YES;
@@ -363,6 +376,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
